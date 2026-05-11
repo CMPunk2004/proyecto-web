@@ -1,5 +1,48 @@
+/* 1. Centra todo y pone bonita la letra */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+/* 2. Estilo del botón principal (Negro) */
+#miBoton {
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+#miBoton:hover {
+    transform: scale(1.1);
+    background-color: #000;
+}
+
+/* 3. Estilo del botón de Reiniciar */
+#btnReiniciar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnReiniciar:hover {
+    background-color: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
 }
