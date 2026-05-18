@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Importante para celulares -->
-    <title>Mi App de Colores</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi App de Colores</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <h1>¡Generador de Colores!</h1> <!-- Título nuevo -->
 
-    <p style="font-size: 24px;">Cambios de color: <span id="contador">0</span></p>
+  <!-- ENCABEZADO -->
+  <header>
+    <h1 id="bienvenida"></h1>
+    <p style="font-size: 20px;">Cambios de color: <span id="contador">0</span></p>
+  </header>
 
-    <button id="miBoton">¡Haz clic aquí!</button>
-    <button id="btnReiniciar">Reiniciar</button>
+  <!-- BOTONES PRINCIPALES (existentes) -->
+  <section class="seccion-botones">
+    <button id="miBoton">🎲 Color Aleatorio</button>
+    <button id="btnReiniciar">↺ Reiniciar</button>
+    <button id="btn-favorito">☆ Agregar a favoritos</button>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- INFO DEL COLOR ACTIVO -->
+  <section class="seccion-info">
+    <h2>Color Activo</h2>
+    <div id="info-color">
+      <span class="sin-resultados">Haz clic en un color para ver su info.</span>
+    </div>
+  </section>
+
+  <!-- BÚSQUEDA Y FILTRO DINÁMICO -->
+  <section class="seccion-busqueda">
+    <h2>🔍 Buscar Colores</h2>
+    <div class="busqueda-controles">
+      <input type="text" id="buscador" placeholder="Buscar por nombre, hex o categoría..." />
+      <select id="filtro-categoria">
+        <option value="todos">Todos</option>
+        <option value="cálido">Cálidos</option>
+        <option value="frío">Fríos</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DINÁMICO (render con JS) -->
+  <section class="seccion-catalogo">
+    <h2>🎨 Catálogo de Colores</h2>
+    <div id="catalogo-colores"></div>
+  </section>
+
+  <!-- SISTEMA DE FAVORITOS -->
+  <section class="seccion-favoritos">
+    <h2>★ Mis Favoritos</h2>
+    <div id="lista-favoritos"></div>
+  </section>
+
+  <!-- main.js - Evaluación Sumativa 2 -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
